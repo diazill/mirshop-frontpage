@@ -12,7 +12,7 @@ export default function WhatsAppWidget() {
     }, []);
 
     const openWhatsApp = () => {
-        window.open("https://wa.me/628xxxxxxx", "_blank");
+        window.open("https://wa.me/6285155428611", "_blank");
     };
 
     return (

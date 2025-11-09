@@ -1,0 +1,17 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@layer base {
+
+  /* Custom global styles can be added here */
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@theme {
+  --color-salem: #088338;
+  --color-doublecolonialwhite: #ecd7a4;
+  --color-bermuda: #74d69c;
+  --color-deyork: #6ccc92;
+}

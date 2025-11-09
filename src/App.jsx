@@ -7,7 +7,6 @@ import storeHours from "./storeHours.json";
 import BestSellingProducts from "./components/BestSellingProducts";
 import products from "./product.json";
 import DataImage from "./data";
-import WhatsAppWidget from "./components/WhatsAppWidget";
 
 const position = [-7.3617390992416585, 110.52008103236403]
 

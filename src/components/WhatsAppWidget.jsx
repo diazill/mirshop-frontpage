@@ -4,32 +4,27 @@ export default function WhatsAppWidget() {
     const [showBubble, setShowBubble] = useState(true);
     const [isHiding, setIsHiding] = useState(false);
 
-    // Otomatis sembunyikan bubble setelah 5 detik
     useEffect(() => {
-        // setelah 10 detik, mulai animasi hide
         const timer = setTimeout(() => {
             setIsHiding(true);
         }, 10000);
-
         return () => clearTimeout(timer);
     }, []);
-
     const openWhatsApp = () => {
         window.open("https://wa.me/6285155428611", "_blank");
     };
 
     return (
-        <div className="fixed bottom-6 right-6 flex items-center gap-2 z-50 animate__animated
-          animate__fadeInRight
-          animate__delay-2s">
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-2">
+            {/* Bubble cuma muncul di layar >= md (tablet / desktop) */}
             {showBubble && (
                 <div
                     className={`
+            hidden md:block
             bg-white shadow-lg rounded-2xl rounded-br-sm px-3 py-2 text-sm text-gray-700
             animate__animated
             ${isHiding ? "animate__fadeOutRight" : "animate__fadeInRight"}
           `}
-                    // ketika animasi fadeOut selesai, baru unmount bubble
                     onAnimationEnd={() => {
                         if (isHiding) setShowBubble(false);
                     }}
@@ -40,14 +35,13 @@ export default function WhatsAppWidget() {
 
             <button
                 onClick={openWhatsApp}
-                className="bg-[#25D366] p-3 rounded-full shadow-lg hover:brightness-110 transition"
                 aria-label="Chat via WhatsApp"
+                className="bg-[#25D366] rounded-full shadow-lg hover:brightness-110 transition p-3 sm:p-4"
             >
                 <svg
                     viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8"
+                    className="w-7 h-7 sm:w-8 sm:h-8"
+                    aria-hidden="true"
                 >
                     <circle cx="16" cy="16" r="16" fill="#25D366" />
                     <path

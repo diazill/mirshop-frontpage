@@ -7,6 +7,7 @@ import storeHours from "./storeHours.json";
 import BestSellingProducts from "./components/BestSellingProducts";
 import products from "./product.json";
 import DataImage from "./data";
+import ServiceOptionsSection from "./components/ServiceOptionsSection";
 
 const position = [-7.3617390992416585, 110.52008103236403]
 
@@ -83,9 +84,12 @@ function App() {
       </section>
 
       {/* End Hero section */}
+      <div className="tentang py-10" id="tentang">
+        <ServiceOptionsSection />
+      </div>
 
       {/* Start tentang section */}
-      <div className="tentang mt-32 py-10" id="tentang">
+      <div className="tentang py-10" id="tentang">
         <div className="tentang-box mt-14 grid lg:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-1">
           <div><StoreHoursSection schedule={storeHours} />
           </div>

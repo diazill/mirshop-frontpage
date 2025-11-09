@@ -19,7 +19,6 @@ function Root() {
 
   useEffect(() => {
     AOS.init();
-
     const timer = setTimeout(() => {
       setIsLoading(false);
       AOS.refresh(); // pastikan posisi animasi di-update

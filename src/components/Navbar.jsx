@@ -2,73 +2,67 @@ import { useState, useEffect } from "react";
 import DataImage from "../data";
 
 const Navbar = () => {
-  const [active, setActive] = useState(false);
+  const [showFloating, setShowFloating] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setActive(true);
-      } else {
-        setActive(false);
-      }
+      const threshold = window.innerHeight * 0.3; // muncul setelah ~2/3 layar discroll
+      setShowFloating(window.scrollY > threshold);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+
+    handleScroll(); // cek posisi awal
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
-    <div className="navbar py-7 flex  items-center justify-between">
-      <div className="logo">
-        <img
-          src={DataImage.LogoImage}
-          alt="Hero Image"
-          className="w-full md:ml-auto animate__animated
-          animate__fadeInUp
-          animate__delay-2s  rounded-md"
-          loading="lazy"
-        />
+    <header className="relative z-[40]">
+      {/* bar atas (logo + nav versi desktop) */}
+      <div className="navbar py-7 flex items-center justify-between">
+        <div className="logo">
+          <img
+            src={DataImage.LogoImage}
+            alt="Logo MIR"
+            className="w-full md:ml-auto animate__animated animate__fadeInLeft animate__delay-2s rounded-md"
+            loading="lazy"
+          />
+        </div>
+
+        {/* navbar versi desktop → selalu kelihatan */}
+        <nav className="hidden md:block animate__animated animate__fadeInRight animate__delay-2s">
+          <ul className="flex gap-10 items-center text-base font-medium">
+            <li><a href="#beranda" className="sm:text-lg text-base font-medium">Beranda</a></li>
+            <li><a href="#tentang" className="sm:text-lg text-base font-medium">Produk</a></li>
+            <li><a href="#proyek" className="sm:text-lg text-base font-medium">Tentang Kami</a></li>
+            <li><a href="#" className="sm:text-lg text-base font-medium">Brand</a></li>
+            <li><a href="#kontak" className="sm:text-lg text-base font-medium">Kontak</a></li>
+          </ul>
+        </nav>
       </div>
-      <div
-        className="animate__animated
-          animate__fadeInRight
-          animate__delay-2s"
+
+      {/* navbar “pill” mengambang versi mobile */}
+      <nav
+        className={`
+          md:hidden
+          fixed left-1/2 -translate-x-1/2
+          w-[92vw] max-w-xl
+          bg-[#b7e0c0] text-green-900
+          rounded-b-2xl
+          shadow-md
+          z-[40]
+          transition-all duration-300
+          ${showFloating ? "top-0 opacity-100" : "-top-20 opacity-0 pointer-events-none"}
+        `}
       >
-        <ul
-          className={`menu flex sm:gap-10 gap-4 items-center md:static fixed
-              left-1/2 -translate-x-1/2 md:translate-x-0
-              md:opacity-100 bg-white/30 backdrop-blur-md p-4
-              rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all  md:transition-none z-40
-              ${active ? "top-0 opacity-100" : "-top-10 opacity-0"}`}
-        >
-          <li>
-            <a href="#beranda" className="sm:text-lg text-base font-medium">
-              Beranda
-            </a>
-          </li>
-          <li>
-            <a href="#tentang" className="sm:text-lg text-base font-medium">
-              Tentang
-            </a>
-          </li>
-          <li>
-            <a href="#proyek" className="sm:text-lg text-base font-medium">
-              Alamat
-            </a>
-          </li>
-          <li>
-            <a href="#" className="sm:text-lg text-base font-medium">
-              Brand
-            </a>
-          </li>
-          <li>
-            <a href="#kontak" className="sm:text-lg text-base font-medium">
-              Kontak Kami
-            </a>
-          </li>
+        <ul className="flex justify-between gap-4 px-6 py-3 text-sm font-medium">
+          <li><a href="#beranda" className="sm:text-lg text-base font-medium">Beranda</a></li>
+          <li><a href="#tentang" className="sm:text-lg text-base font-medium">Produk</a></li>
+          <li><a href="#proyek" className="sm:text-lg text-base font-medium">Tentang Kami</a></li>
+          <li><a href="#" className="sm:text-lg text-base font-medium">Brand</a></li>
+          <li><a href="#kontak" className="sm:text-lg text-base font-medium">Kontak</a></li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 

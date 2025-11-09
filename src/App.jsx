@@ -46,7 +46,9 @@ function App() {
               <img
                 src={DataImage.HeroImage}
                 alt="Hero Image"
-                loading="lazy"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
                 className="w-full max-w-[560px] h-auto md:ml-auto mx-auto 
                      animate__animated animate__fadeInUp animate__delay-2s rounded-md"
               />

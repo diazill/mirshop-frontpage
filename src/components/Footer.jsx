@@ -67,15 +67,15 @@ const Footer = () => {
           <ul className="space-y-2 text-[13px]">
             <li className="flex items-start gap-2">
               <span className="mt-[2px] text-yellow-300">★</span>
-              <span>(555) 123-4567</span>
+              <span>+6285155428611</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-[2px] text-yellow-300">★</span>
-              <span>info@petpoultry.com</span>
+              <span>mirpakanternak@gmail.com</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-[2px] text-yellow-300">★</span>
-              <span>123 Main Street, Your Town, ST 12345</span>
+              <span>Jl. Tingkir Raya No.Km 07, Tingkir Tengah, Kec. Tingkir, Kota Salatiga, Jawa Tengah 50745</span>
             </li>
           </ul>
         </div>
@@ -84,7 +84,7 @@ const Footer = () => {
       {/* Bottom bar */}
       <div className="border-t border-[#006d34] bg-[#047857] rounded-b-2xl">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-4 text-[12px] text-gray-100 md:flex-row md:items-center md:justify-between">
-          <p>© 2025 Pet &amp; Poultry Finder. All rights reserved.</p>
+          <p>© 2025 MIR Pakan Ternak Developer. All rights reserved.</p>
 
           <div className="flex gap-4">
             <button className="text-[12px] lowercase tracking-wide hover:text-yellow-300">

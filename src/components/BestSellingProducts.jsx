@@ -86,7 +86,11 @@ export default function BestSellingProducts({ products = SAMPLE_PRODUCTS }) {
                 </div>
 
                 {/* Pills */}
-                <div className="flex items-center justify-center gap-3 mt-6">
+                <div className="flex items-center justify-center gap-3 mt-6"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                    data-aos-once="true">
                     {["Best", "Pets", "Poultry", "All"].map((cat) => {
                         const active = filter === cat;
                         return (
@@ -106,7 +110,11 @@ export default function BestSellingProducts({ products = SAMPLE_PRODUCTS }) {
                     })}
                 </div>
 
-                <div className="relative mt-10">
+                <div className="relative mt-10"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="400"
+                    data-aos-once="true">
                     {/* tombol kiri */}
                     <button
                         onClick={() => scroll("left")}
@@ -158,7 +166,7 @@ export default function BestSellingProducts({ products = SAMPLE_PRODUCTS }) {
                                 <div className="p-4 sm:p-5 space-y-2 sm:space-y-3 flex-1">
                                     <p className="text-xs text-stone-500">{item.category}</p>
                                     <h3 className="text-base sm:text-lg font-semibold text-stone-800 min-h-[48px]">{item.title}</h3>
-                                    <p className="text-xs sm:text-sm text-stone-600 leading-relaxed min-h-[72px]">{item.blurb}</p>
+                                    <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">{item.blurb}</p>
                                 </div>
 
                                 <div className="mt-auto p-4 pt-0 sm:pt-0 sm:p-5 flex items-center justify-between">

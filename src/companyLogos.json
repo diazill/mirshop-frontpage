@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Excel",
+        "src": "/assets/logo_brand/excel.webp",
+        "href": "https://www.excelpetfood.id/"
+    },
+    {
+        "title": "Me-O",
+        "src": "/assets/logo_brand/meo.webp",
+        "href": "https://www.perfectcompanion.co.id/"
+    },
+    {
+        "title": "Bolt",
+        "src": "/assets/logo_brand/bolt.webp",
+        "href": "https://cppetindo.com/"
+    },
+    {
+        "title": "Cat Choize",
+        "src": "/assets/logo_brand/catchoize.webp",
+        "href": "https://www.perfectcompanion.co.id/"
+    },
+    {
+        "title": "Felibite",
+        "src": "/assets/logo_brand/felibite.webp",
+        "href": "https://www.mataharisakti.com/products/felibite"
+    },
+    {
+        "title": "Royal Canin",
+        "src": "/assets/logo_brand/royalcanin.webp",
+        "href": "https://www.royalcanin.com/"
+    },
+    {
+        "title": "Whiskas   ",
+        "src": "/assets/logo_brand/whiskas.webp",
+        "href": "https://www.whiskasindonesia.com/m"
+    }
+]

@@ -2,24 +2,38 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import { useEffect, useRef } from "react";
 import L from "leaflet";
+
 import StoreHoursSection from "./components/StoreHoursSection";
 import storeHours from "./storeHours.json";
+
 import BestSellingProducts from "./components/BestSellingProducts";
 import products from "./product.json";
+
 import DataImage from "./data";
 import ServiceOptionsSection from "./components/ServiceOptionsSection";
+import CategoriesPet from "./components/CategoriesPet";
 
-const position = [-7.3617390992416585, 110.52008103236403]
+import LogoLoop from "@/components/LogoLoop"; // pastikan alias @ sudah diset di vite.config.js
+import companyLogosData from "./companyLogos.json";
 
-// Custom icon (contoh: paw 🐾)
+const position = [-7.3617390992416585, 110.52008103236403];
+
+const companyLogos = companyLogosData.map((item) => ({
+  src: item.src,
+  alt: item.title,
+  title: item.title,
+  href: item.href || null
+}));
+
+// Custom icon untuk marker peta
 const petshopIcon = new L.Icon({
-  iconUrl: "/assets/kucing.webp", // bisa pakai icon custom
-  iconSize: [40, 40], // ukuran icon
+  iconUrl: "/assets/kucing.webp", // pastikan file ada di public/assets/kucing.webp
+  iconSize: [40, 40],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40],
 });
 
-// Komponen untuk buka popup otomatis
+// Komponen untuk buka popup otomatis ketika map load
 function AutoOpenPopup({ markerRef }) {
   const map = useMap();
 
@@ -33,14 +47,14 @@ function AutoOpenPopup({ markerRef }) {
 }
 
 function App() {
-  const markerRef = useRef();
+  const markerRef = useRef(null);
+
   return (
     <>
+      {/* HERO SECTION */}
       <section className="bg-salem rounded-3xl">
-        {/* container + padding responsif */}
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero grid grid-cols-1 md:grid-cols-2 items-center pt-10 gap-6 xl:gap-0 rounded-2xl">
-
             {/* Kolom gambar */}
             <div className="order-1 md:order-none">
               <img
@@ -65,8 +79,9 @@ function App() {
               </h1>
 
               <p className="text-base leading-relaxed md:leading-8 mb-6 text-white/80">
-                Apa pun hewan kesayangan Anda, MIR hadir dengan solusi pakan yang penuh cinta
-                dan nutrisi. Karena kasih sayang bisa dimulai dari pakan yang tepat. #MIRsayangternak
+                Apa pun hewan kesayangan Anda, MIR hadir dengan solusi pakan yang
+                penuh cinta dan nutrisi. Karena kasih sayang bisa dimulai dari
+                pakan yang tepat. #MIRsayangternak
               </p>
 
               <div className="flex items-center gap-3 sm:gap-4">
@@ -84,26 +99,32 @@ function App() {
           </div>
         </div>
       </section>
+      {/* END HERO */}
 
-      {/* End Hero section */}
-      <div className="tentang py-10" id="tentang">
-        <ServiceOptionsSection />
+      {/* KATEGORI HEWAN */}
+      <div className="kategori-pet py-10" id="kategori-pet">
+        <CategoriesPet />
       </div>
 
-      {/* Start tentang section */}
+      {/* JAM TOKO & PRODUK TERLARIS */}
       <div className="tentang py-10" id="tentang">
         <div className="tentang-box mt-14 grid lg:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-1">
-          <div><StoreHoursSection schedule={storeHours} />
+          <div>
+            <StoreHoursSection schedule={storeHours} />
           </div>
         </div>
         <div className="tools mt-32">
           <BestSellingProducts products={products} />
         </div>
       </div>
-      {/* end tentang section */}
 
-      {/* Start Alamat section */}
-      <div className="proyek mt-32  py-10" id="proyek">
+      {/* SERVICE OPTIONS */}
+      <div className="tentang py-10" id="tentang">
+        <ServiceOptionsSection />
+      </div>
+
+      {/* ALAMAT (MAP) */}
+      <div className="proyek mt-32 py-10" id="proyek">
         <h1
           className="text-center text-4xl font-bold mb-2"
           data-aos="fade-up"
@@ -121,12 +142,15 @@ function App() {
         >
           Temukan kami di berbagai lokasi berikut
         </p>
-        <div style={{ height: "400px", width: "100%" }}>
-          <MapContainer
-            center={position}
-            zoom={16}
-            style={{ height: "100%", width: "100%" }}
-          >
+
+        <div
+          style={{ height: "400px", width: "100%" }}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-once="true"
+        >
+          <MapContainer center={position} zoom={16} style={{ height: "100%", width: "100%" }}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -134,11 +158,13 @@ function App() {
 
             <Marker position={position} icon={petshopIcon} ref={markerRef}>
               <Popup>
-                🐾 <b>MIR (Petshop & Pakan Ternak)</b>
+                🐾 <b>MIR (Petshop &amp; Pakan Ternak)</b>
                 <br />
-                Sebelah Mr. Piss, Jl. Tingkir Raya No.Km 07, Tingkir Tengah, Kec. Tingkir, Kota Salatiga, Jawa Tengah 50745 <br />
+                Sebelah Mr. Piss, Jl. Tingkir Raya No.Km 07, Tingkir Tengah, Kec. Tingkir, Kota
+                Salatiga, Jawa Tengah 50745
+                <br />
                 <a
-                  href={`https://maps.app.goo.gl/EmHKnvp4FF49raCw7`}
+                  href="https://maps.app.goo.gl/EmHKnvp4FF49raCw7"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -151,9 +177,8 @@ function App() {
           </MapContainer>
         </div>
       </div>
-      {/* end proyek section */}
 
-      {/* start kontak section */}
+      {/* BRAND LOGO LOOP */}
       <div className="kontak mt-32 sm:p-10 p-0" id="kontak">
         <h1
           className="text-4xl mb-2 font-bold text-center"
@@ -161,7 +186,7 @@ function App() {
           data-aos-duration="1000"
           data-aos-once="true"
         >
-          Kontak
+          Brand Yang Kami Tawarkan
         </h1>
         <p
           className="text-base/loose text-center mb-10 opacity-50"
@@ -170,65 +195,26 @@ function App() {
           data-aos-delay="300"
           data-aos-once="true"
         >
-          Mari terhubung dengan saya
+          Berbagai merek pakan ternak dan hewan peliharaan berkualitas yang kami sediakan
         </p>
-        <form
-          action="https://formsubmit.co/diaz.illyasa1006@gmail.com"
-          method="POST"
-          className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md"
-          autoComplete="off"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="500"
-          data-aos-once="true"
-        >
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
-              <label className="font-semibold">Nama Lengkap</label>
-              <input
-                type="text"
-                name="nama"
-                placeholder="Masukan Nama.."
-                className="border border-zinc-500 p-2 rounded-md"
-                required
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="font-semibold">Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Masukan Email.."
-                className="border border-zinc-500 p-2 rounded-md"
-                required
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="pesan" className="font-semibold">
-                Pesan
-              </label>
-              <textarea
-                name="pesan"
-                id="pesan"
-                cols="45"
-                rows="7"
-                placeholder="Pesan ..."
-                className="border border-zinc-500 p-2 rounded-md"
-                required
-              ></textarea>
-            </div>
-            <div className="text-center">
-              <button
-                type="submit"
-                className="bg-violet-700 p-3 rounded-lg w-full cursor-pointer border border-zinc-600 hover:bg-violet-600"
-              >
-                Kirim Pesan
-              </button>
-            </div>
-          </div>
-        </form>
+
+        <div style={{ height: "200px", position: "relative", overflow: "hidden" }}>
+          {/* Horizontal loop */}
+          <LogoLoop
+            logos={companyLogos}
+            speed={50}
+            direction="left"
+            logoHeight={75}
+            hoverSpeed={0}
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#ffffff"
+            ariaLabel="Brand pakan yang tersedia"
+          />
+        </div>
       </div>
-      {/* end kontak section */}
+      {/* END BRAND LOGO LOOP */}
+
       <SpeedInsights />
     </>
   );

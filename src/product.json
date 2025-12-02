@@ -5,6 +5,8 @@
         "price": 13000,
         "blurb": "Makanan kucing kering berkualitas dari Indonesia, berbentuk donat atau ikan, diperkaya Omega 3 & 6 serta taurine untuk mendukung bulu lembut dan kesehatan mata",
         "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": "500gr",
         "image": "/assets/produk/felibite1.webp",
         "isBestProduct": true
     },
@@ -14,6 +16,8 @@
         "price": 6200,
         "blurb": "Pakan kucing kering & basah dari WHISKAS® untuk anak dan dewasa. Diperkaya 41 nutrien esensial seperti Omega 3, biotin & taurine untuk mendukung bulu sehat, imun kuat, dan kenikmatan makan. Varian rasa : Tuna, Ocean Fish, Mackerel.",
         "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": "500gr",
         "image": "/assets/produk/whiskas1.webp",
         "isBestProduct": true
     },
@@ -23,6 +27,8 @@
         "price": 8500,
         "blurb": "Bekatul berkualitas dari lapisan halus kulit ari beras. Kaya vitamin B kompleks, serat, dan lemak sehat — cocok sebagai bahan pakan ayam, burung, ikan, sapi, dan kambing.",
         "category": "Poultry",
+        "category_pets": "Unggas",
+        "weight": "500gr",
         "image": "/assets/produk/bekatul.webp",
         "isBestProduct": true
     },
@@ -32,6 +38,8 @@
         "price": 15000,
         "blurb": "Biji millet putih pilihan, kaya karbohidrat dan protein. Disukai kenari, lovebird, parkit, dan burung kecil lainnya. Sumber energi tinggi dengan pencernaan mudah.",
         "category": "Poultry",
+        "category_pets": "Burung",
+        "weight": "500gr",
         "image": "/assets/produk/miletputih.webp",
         "isBestProduct": true
     },
@@ -41,6 +49,8 @@
         "price": 17000,
         "blurb": "Biji millet merah berkualitas untuk variasi pakan burung. Mengandung serat dan lemak lebih tinggi, baik untuk merpati, parrot, ayam kecil, dan burung hias.",
         "category": "Poultry",
+        "category_pets": "Burung",
+        "weight": "500gr",
         "image": "/assets/produk/miletmerah.webp",
         "isBestProduct": true
     }

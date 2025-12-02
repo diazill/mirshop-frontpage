@@ -1,0 +1,23 @@
+[
+    {
+        "slug": "kucing",
+        "name": "Kucing",
+        "image": "/assets/meng.webp",
+        "color": "#047857",
+        "order": 1
+    },
+    {
+        "slug": "unggas",
+        "name": "Unggas",
+        "image": "/assets/pitik.webp",
+        "color": "#047857",
+        "order": 2
+    },
+    {
+        "slug": "burung",
+        "name": "Burung",
+        "image": "/assets/lovebird.webp",
+        "color": "#047857",
+        "order": 3
+    }
+]

@@ -1,4 +1,6 @@
 import DataImage from "../data";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -88,13 +90,10 @@ const Footer = () => {
 
           <div className="flex gap-4">
             <button className="text-[12px] lowercase tracking-wide hover:text-yellow-300">
-              facebook
+              <FaFacebookSquare />
             </button>
             <button className="text-[12px] lowercase tracking-wide hover:text-yellow-300">
-              photo_camera
-            </button>
-            <button className="text-[12px] lowercase tracking-wide hover:text-yellow-300">
-              chat
+              <FaInstagram />
             </button>
           </div>
         </div>

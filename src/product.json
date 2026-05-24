@@ -1,28 +1,405 @@
 [
     {
-        "id": 1,
-        "title": "Felibite",
+        "title": "Felibite Adult Cat Salmon Mentai Flavor 500gr",
         "price": 13000,
-        "blurb": "Makanan kucing kering berkualitas dari Indonesia, berbentuk donat atau ikan, diperkaya Omega 3 & 6 serta taurine untuk mendukung bulu lembut dan kesehatan mata",
+        "blurb": "",
         "category": "Pets",
         "category_pets": "Kucing",
-        "weight": "500gr",
+        "weight": 500,
         "image": "/assets/produk/felibite1.webp",
-        "isBestProduct": true
+        "isBestProduct": false
     },
     {
-        "id": 2,
-        "title": "WHISKAS Adult / Junior",
-        "price": 6200,
-        "blurb": "Pakan kucing kering & basah dari WHISKAS® untuk anak dan dewasa. Diperkaya 41 nutrien esensial seperti Omega 3, biotin & taurine untuk mendukung bulu sehat, imun kuat, dan kenikmatan makan. Varian rasa : Tuna, Ocean Fish, Mackerel.",
+        "title": "Felibite Adult Cat Tuna O Toro Flavor 500gr",
+        "price": 13000,
+        "blurb": "",
         "category": "Pets",
         "category_pets": "Kucing",
-        "weight": "500gr",
+        "weight": 500,
+        "image": "/assets/produk/felibite1.webp",
+        "isBestProduct": false
+    },
+    {
+        "title": "Felibite Adult Cat Tuna & Chicken Flavor 500gr",
+        "price": 13000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/felibite1.webp",
+        "isBestProduct": false
+    },
+    {
+        "title": "Felibite Adult Cat Donut Tuna & Chicken Flavor 500gr",
+        "price": 13000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/felibite1.webp",
+        "isBestProduct": false
+    },
+    {
+        "title": "Lezato Kitten Cat Food Tuna Flavor 800gr",
+        "price": 20000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
         "image": "/assets/produk/whiskas1.webp",
         "isBestProduct": true
     },
     {
-        "id": 3,
+        "title": "Lezato Adult Cat Food Tuna Flavor 1Kg",
+        "price": 22000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 1000,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "BOLT Adult Cat Food Tuna Flavor 800gr",
+        "price": 19000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "BOLT Adult Cat Food Salmon Flavor 800gr",
+        "price": 19000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "BOLT Adult Cat Food Donut Tuna Flavor 800gr",
+        "price": 19000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "BOLT Mother & Kitten Cat Food Salmon Flavor 500gr",
+        "price": 14000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "BOLT Mother & Kitten Cat Food Tuna Flavor 500gr",
+        "price": 14000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Cuties Catz Adult Cat Food Tuna Flavor 500gr",
+        "price": 14000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Chester Adult Cat Food Tuna Flavor 800gr",
+        "price": 17000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Ori Cat Adult Cat Food Tuna Flavor 800gr",
+        "price": 19000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Ori Cat Adult Cat Food Tuna & Chicken Flavor 800gr",
+        "price": 19000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Ori Cat Adult Cat Food Salmon Flavor 800gr",
+        "price": 19000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Ori Cat Kitten Cat Food Tuna Flavor 800gr",
+        "price": 21000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Ori Cat Kitten Cat Food Salmon Flavor 800gr",
+        "price": 21000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Excel Donut Tuna Flavor 500gr",
+        "price": 12000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Excel Tuna Flavor 500gr",
+        "price": 12000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Excel Chicken & Tuna Flavor 500gr",
+        "price": 12000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Excel Salmon Flavor 500gr",
+        "price": 12000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Excel Mother & Kitten Cat Food Chicken & Tuna Flavor 500gr",
+        "price": 13000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Hepito Tasty Tuna Flavor 400gr",
+        "price": 9000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 400,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Nice Adult Cat Food Seafood Flavor 800gr",
+        "price": 17000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Nice Adult Cat Food Tuna Flavor 800gr",
+        "price": 17000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Mister Puss Tuna Flavor 500gr",
+        "price": 12000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Mister Puss Salmon Flavor 500gr",
+        "price": 12000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 500,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Cattie Care Tuna Flavor 800gr",
+        "price": 22000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Cattie Care Beauty Chicken & Tuna Flavor 800gr",
+        "price": 23000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Kucing KU Adult Cat Food Tuna Steak Flavor 800gr",
+        "price": 17000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Kucing KU Kitten Cat Food Tuna Steak Flavor 800gr",
+        "price": 18000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Beauty Premium Cat Food Adult & Kitten  Chicken & Salmon Flavor 800gr",
+        "price": 28000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Whiskas Adult Cat Food Tuna Flavor 480gr",
+        "price": 32000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 480,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Whiskas Mother & Kitten Cat Food Ocean Fish Flavor 450gr",
+        "price": 34000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 450,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "TopPet Cat Food Tuna Flavor 800gr",
+        "price": 16000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Amigo Adult Cat Food Salmon Flavor 800gr",
+        "price": 17000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Amigo Adult Cat Food Tuna Flavor 800gr",
+        "price": 17000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Cat Choize Adult Cat Food Salmon Flavor 800gr",
+        "price": 18000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
+        "title": "Cat Choize Adult Cat Food Tuna Flavor 800gr",
+        "price": 18000,
+        "blurb": "",
+        "category": "Pets",
+        "category_pets": "Kucing",
+        "weight": 800,
+        "image": "/assets/produk/whiskas1.webp",
+        "isBestProduct": true
+    },
+    {
         "title": "Bekatul Halus",
         "price": 8500,
         "blurb": "Bekatul berkualitas dari lapisan halus kulit ari beras. Kaya vitamin B kompleks, serat, dan lemak sehat — cocok sebagai bahan pakan ayam, burung, ikan, sapi, dan kambing.",
@@ -33,7 +410,6 @@
         "isBestProduct": true
     },
     {
-        "id": 4,
         "title": "Millet Putih",
         "price": 15000,
         "blurb": "Biji millet putih pilihan, kaya karbohidrat dan protein. Disukai kenari, lovebird, parkit, dan burung kecil lainnya. Sumber energi tinggi dengan pencernaan mudah.",
@@ -44,7 +420,6 @@
         "isBestProduct": true
     },
     {
-        "id": 5,
         "title": "Millet Merah",
         "price": 17000,
         "blurb": "Biji millet merah berkualitas untuk variasi pakan burung. Mengandung serat dan lemak lebih tinggi, baik untuk merpati, parrot, ayam kecil, dan burung hias.",

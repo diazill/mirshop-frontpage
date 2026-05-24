@@ -52,50 +52,72 @@ function App() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="bg-salem rounded-3xl">
+      <section className="bg-salem rounded-3xl relative z-0">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="hero grid grid-cols-1 md:grid-cols-2 items-center pt-10 gap-6 xl:gap-0 rounded-2xl">
-            {/* Kolom gambar */}
-            <div className="order-1 md:order-none">
-              <img
-                src={DataImage.HeroImage}
-                alt="Hero Image"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-                className="w-full max-w-[560px] h-auto md:ml-auto mx-auto 
-                     animate__animated animate__fadeInUp animate__delay-2s rounded-md"
-              />
+          
+          {/* GRID CONTAINER: Penyesuaian gap untuk jarak ideal antar kolom */}
+          <div className="hero grid grid-cols-1 md:grid-cols-2 items-center py-12 gap-10 md:gap-16 lg:gap-24 rounded-2xl">
+            
+            {/* ========================================= */}
+            {/* 1. KOLOM GAMBAR (Kiri pada Desktop)       */}
+            {/* ========================================= */}
+            <div className="order-1 md:order-none relative group animate__animated animate__fadeInUp animate__delay-2s w-full flex justify-center">
+              
+              {/* Dekorasi Glow Belakang */}
+              <div className="absolute inset-0 -z-10 bg-white/20 rounded-3xl blur-2xl transform group-hover:scale-105 transition-transform duration-500 hidden md:block"></div>
+              
+              {/* FRAME GAMBAR: Pengunci ukuran maksimal dan proporsi 4:3 */}
+              <div className="relative w-full max-w-[450px] aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-black/20 border-4 border-white/10 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-black/30">
+                <img
+                  src={DataImage.HeroImage}
+                  alt="Toko MIR Pet Shop"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  /* OBJECT-COVER: Mencegah gambar gepeng/distorsi */
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                />
+              </div>
             </div>
 
-            {/* Kolom teks */}
+            {/* ========================================= */}
+            {/* 2. KOLOM TEKS (Kanan pada Desktop)        */}
+            {/* ========================================= */}
             <div className="animate__animated animate__fadeInUp animate__delay-1s">
-              <div className="flex items-center gap-3 mb-6 bg-white text-salem p-4 rounded-2xl w-full md:w-fit">
-                <q className="font-medium">MIR PET SHOP &amp; PAKAN TERNAK</q>
+              
+              {/* Badge / Tagline */}
+              <div className="flex items-center gap-3 mb-6 bg-white text-salem p-4 rounded-2xl w-full md:w-fit shadow-sm">
+                <q className="font-medium">MIR PET SHOP & PAKAN TERNAK</q>
               </div>
 
-              <h1 className="text-4xl md:text-5xl/tight font-bold mb-6 text-white">
+              {/* Judul Utama */}
+              <h1 className="text-4xl md:text-5xl/tight font-bold mb-6 text-white drop-shadow-md">
                 Karena Mereka Juga Butuh Disayang
               </h1>
 
-              <p className="text-base leading-relaxed md:leading-8 mb-6 text-white/80">
+              {/* Deskripsi */}
+              <p className="text-base leading-relaxed md:leading-8 mb-8 text-white/90">
                 Apa pun hewan kesayangan Anda, MIR hadir dengan solusi pakan yang
                 penuh cinta dan nutrisi. Karena kasih sayang bisa dimulai dari
-                pakan yang tepat. #MIRsayangternak
+                pakan yang tepat. <span className="font-semibold tracking-wide">#MIRsayangternak</span>
               </p>
 
+              {/* Tombol Aksi */}
               <div className="flex items-center gap-3 sm:gap-4">
                 <a
                   href="https://maps.app.goo.gl/GZUAUaTMjaHao8NN8"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-salem px-5 py-3 rounded-2xl 
-                       hover:bg-bermuda hover:text-white transition mb-10"
+                  className="inline-flex items-center gap-2 bg-white text-salem px-6 py-3.5 rounded-2xl 
+                            font-medium shadow-lg shadow-black/10 transition-all duration-300
+                            hover:bg-bermuda hover:text-white hover:-translate-y-1"
                 >
                   Lihat Alamat <i className="ri-arrow-down-line ri-lg" />
                 </a>
               </div>
+
             </div>
+            
           </div>
         </div>
       </section>
